@@ -40,3 +40,4 @@ Tipos De Atendimentos: Atualização // BPC // Desbloqueio // Folha resumo // Ca
 *Marcar dias especificos (Dom a Dom)
 *Editar horas para Funcionamento (A Partir das 07:00 as 12:30)
 *Marcar hora de Cadastro.
+wfefwefwe

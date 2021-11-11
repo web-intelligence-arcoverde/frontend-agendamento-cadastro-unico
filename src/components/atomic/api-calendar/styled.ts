@@ -4,7 +4,8 @@ import { COLORS } from 'src/constants';
 export const Container =styled.div`
 display: flex;
 flex-wrap: wrap;
-margin: 5px;
+margin-top: 5px;
+justify-content: center;
 
 `
 
@@ -22,6 +23,10 @@ export const Card = styled.button`
   color: ${COLORS.primaryWhite};
   border-radius: 7px;
   border: none;
+  
+  @media (min-width:768px) {
+    width: 47%;
+  }
   
   :hover {
     background-color: ${COLORS.secondGreen};

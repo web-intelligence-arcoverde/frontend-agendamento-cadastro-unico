@@ -5,7 +5,7 @@ export const Container = styled.div`
    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: 30px;
   button {
     width: 90%;
@@ -16,9 +16,15 @@ export const Container = styled.div`
     background:${COLORS.secondGreen};
     font-size: 15px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   img {
-    width: 18px;
+    width: 20px;
+    margin-right: 5px;
+    
+    
     
   }
 `;

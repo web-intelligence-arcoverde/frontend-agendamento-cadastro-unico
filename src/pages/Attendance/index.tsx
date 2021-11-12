@@ -13,6 +13,9 @@ const Attendance = () => {
   const handleOptions = () => {
     history.push('options')
   }
+  const handleConfirm = () => {
+    history.push('formulario')
+  }
 
   return (
     <Container>
@@ -38,7 +41,7 @@ const Attendance = () => {
         <Hours />
       </Horas>
       <ButtonBack onClick={handleOptions} />
-      <Confirm />
+      <Confirm onClick={handleConfirm} />
     </Container>
   )
 }

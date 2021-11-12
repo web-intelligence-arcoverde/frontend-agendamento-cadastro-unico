@@ -6,7 +6,7 @@ export const Container = styled.div`
   
   align-items: center;
   
-  height: 100vh;
+  height: auto;
 `;
 
 export const Head =styled.div`
@@ -35,4 +35,14 @@ h3{
   padding-left: 10px;
 }
 
+
 `
+export const Horas =styled.div`
+width: 95%;
+margin: 20px;
+
+h3{
+  text-align: start;
+  margin: 5px;
+  padding-left: 10px;
+}`

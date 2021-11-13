@@ -14,11 +14,14 @@ const Options = () => {
   const handleHome = () => {
     history.push('/')
   }
+  const handleRegistre = () => {
+    history.push('novo-cadastro')
+  }
   return (
     <Container>
       <Prefeitura />
       <Card onClick={handleAttendance} title="Atendimento" />
-      <Card title="Cadastro Novo" />
+      <Card onClick={handleRegistre} title="Cadastro Novo" />
       <Social />
       <ButtonBack onClick={handleHome} />
     </Container>

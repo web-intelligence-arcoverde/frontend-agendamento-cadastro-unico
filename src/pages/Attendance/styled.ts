@@ -17,7 +17,7 @@ export const Att =styled.div`
 width: 95%;
 margin-bottom: 15px;
 
-h3{
+h4{
   text-align: start;
   margin: 5px;
   padding-left: 6px;
@@ -27,7 +27,7 @@ h3{
 export const Dates =styled.div`
 width: 95%;
 
-h3{
+h4{
   text-align: start;
   margin: 5px;
   padding-left: 10px;
@@ -39,7 +39,7 @@ export const Horas =styled.div`
 width: 95%;
 margin: 20px;
 
-h3{
+h4{
   text-align: start;
   margin: 5px;
   padding-left: 10px;

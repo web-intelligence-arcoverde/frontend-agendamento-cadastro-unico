@@ -24,7 +24,7 @@ const Attendance = () => {
         <Prefeitura />
       </Head>
       <Att>
-        <h3>Atendimento escolhido</h3>
+        <h4>Atendimento escolhido</h4>
         <Card
           title="Atendimento"
           subtitle="Todos os horários não agendados"
@@ -33,11 +33,11 @@ const Attendance = () => {
       </Att>
 
       <Dates>
-        <h3>Selecione a data</h3>
+        <h4>Selecione a data</h4>
         <Calendar />
       </Dates>
       <Horas>
-        <h3>Selecione o Horario</h3>
+        <h4>Selecione o Horario</h4>
         <Hours />
       </Horas>
       <ButtonBack onClick={handleOptions} />

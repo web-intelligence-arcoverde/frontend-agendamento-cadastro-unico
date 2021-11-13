@@ -29,7 +29,7 @@ h3{
 }`
 export const Dates =styled.div`
 width: 100%;
-
+margin-top: 20px;
 h3{
   text-align: start;
   margin: 5px;

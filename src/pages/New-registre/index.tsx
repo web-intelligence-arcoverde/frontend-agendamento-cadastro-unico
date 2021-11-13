@@ -35,6 +35,7 @@ const Registre = () => {
         </Dates>
       </Att>
       <Horas>
+        <h3>Hora selecionada</h3>
         <Card title="9:00 horas" />
       </Horas>
 

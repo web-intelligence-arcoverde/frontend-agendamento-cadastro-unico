@@ -40,7 +40,7 @@ h3{
 `
 export const Horas =styled.div`
 width: 95%;
-margin: 20px;
+margin-bottom: 20px;
 
 h3{
   text-align: start;

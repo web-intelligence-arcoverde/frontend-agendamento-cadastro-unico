@@ -1,5 +1,4 @@
-/* eslint-disable no-param-reassign */
-export const maskCpf = (v: any, value: any) => {
+export const maskCpf = (v: any, value: any): any => {
   v = v.replace(/\D/g, '')
 
   if (typeof value !== 'undefined') {

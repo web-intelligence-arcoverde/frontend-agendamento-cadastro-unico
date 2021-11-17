@@ -1,5 +1,4 @@
-import Img from 'assets/icons/arrow.svg'
-
+import { ReactComponent as ArrowIcon } from 'assets/icons/arrow.svg'
 import ButtonBack from 'src/components/atomic/SpeedDialButton'
 import Card from 'src/components/atomic/CardButton'
 import PrefectureLogo from 'components/molecules/PrefectureLogo'
@@ -40,7 +39,7 @@ const Registre = () => {
         <Card title="9:00 horas" />
       </Horas>
 
-      <ButtonBack onClick={handleOption} src={Img} />
+      <ButtonBack onClick={handleOption} Icon={ArrowIcon} />
       <Confirm onClick={handleForm} />
     </Container>
   )

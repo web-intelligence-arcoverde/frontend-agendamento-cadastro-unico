@@ -5,10 +5,10 @@
     "jest": true
   },
   "extends": [
-    "plugin:react/recommended",
+    "react-app",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "prettier/@typescript-eslint"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -49,9 +49,13 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    
   },
   "settings": {
+     "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
     "import/resolver": {
       "typescript": {}
     }

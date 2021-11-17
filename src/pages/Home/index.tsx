@@ -1,24 +1,27 @@
-import React from 'react'
+import { Container, ContainerButton } from './style'
 
-import { Container } from './styled'
-import Button from 'components/atomic/button'
-import Social from 'src/components/atomic/ass-social'
+import Button from 'src/components/atomic/Button'
+import { Title } from 'src/components/atomic/Typography'
+
+import Social from 'src/components/molecules/SocialAssistanceLogo'
+import PrefectureLogo from 'components/molecules/PrefectureLogo'
+
 import { useHistory } from 'react-router-dom'
-import Prefeitura from 'src/components/atomic/logo-prefeitura'
 
 const Home = () => {
   const history = useHistory()
   const handleOptions = () => {
-    history.push('options')
+    history.push('/scheuling-types')
   }
   return (
     <Container>
-      <Prefeitura />
+      <PrefectureLogo />
 
-      <div>
-        <h1>Sistema de Agendamento Online</h1>
-      </div>
-      <Button onClick={handleOptions} />
+      <Title>Sistema de Agendamento Online</Title>
+
+      <ContainerButton>
+        <Button onClick={handleOptions} label={'CLIQUE AQUI PARA ENTRAR'} />
+      </ContainerButton>
       <Social />
     </Container>
   )

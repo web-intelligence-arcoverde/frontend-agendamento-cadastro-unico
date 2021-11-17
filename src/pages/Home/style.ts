@@ -24,3 +24,7 @@ export const Container = styled.div`
   
   }
 `;
+
+export const ContainerButton = styled.div`
+  width: 90%;
+`

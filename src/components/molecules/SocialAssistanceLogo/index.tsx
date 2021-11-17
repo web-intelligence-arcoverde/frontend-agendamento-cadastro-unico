@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container } from './styled'
 import IconSocial from 'assets/image/img-social.png'
 

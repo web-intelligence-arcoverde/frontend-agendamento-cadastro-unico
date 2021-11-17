@@ -1,10 +1,11 @@
-import React from 'react'
-import ButtonBack from 'src/components/atomic/btn-back'
-import Card from 'src/components/atomic/btn-option'
-import Prefeitura from 'src/components/atomic/logo-prefeitura'
+import Img from 'assets/icons/arrow.svg'
+
+import ButtonBack from 'src/components/atomic/SpeedDialButton'
+import Card from 'src/components/atomic/CardButton'
+import PrefectureLogo from 'components/molecules/PrefectureLogo'
 
 import { Att, Head, Dates, Container, Horas } from './styled'
-import Calendar from 'src/components/atomic/api-calendar'
+import Calendar from 'src/components/molecules/SchedulingCalendar'
 import { useHistory } from 'react-router-dom'
 import Confirm from 'src/components/atomic/btn-confirm'
 
@@ -21,7 +22,7 @@ const Registre = () => {
     <Container>
       <Head>
         <h3>Agendamento Online</h3>
-        <Prefeitura />
+        <PrefectureLogo />
       </Head>
       <Att>
         <h3>Atendimento escolhido </h3>
@@ -39,7 +40,7 @@ const Registre = () => {
         <Card title="9:00 horas" />
       </Horas>
 
-      <ButtonBack onClick={handleOption} />
+      <ButtonBack onClick={handleOption} src={Img} />
       <Confirm onClick={handleForm} />
     </Container>
   )

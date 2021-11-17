@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { Container, CardHours } from './styled'
-import CardComponent from 'src/components/atomic/btn-option'
+import CardComponent from 'src/components/atomic/CardButton'
 import { apiHours } from 'src/constants/hours'
 
 const Hours = () => {

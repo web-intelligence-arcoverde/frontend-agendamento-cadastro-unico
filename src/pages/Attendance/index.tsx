@@ -1,11 +1,10 @@
-import React from 'react'
-import Card from 'src/components/atomic/btn-option'
-import Prefeitura from 'src/components/atomic/logo-prefeitura'
+import Card from 'src/components/atomic/CardButton'
+import PrefectureLogo from 'components/molecules/PrefectureLogo'
 import { Att, Container, Dates, Head, Horas } from './styled'
 import { useHistory } from 'react-router-dom'
-import ButtonBack from 'src/components/atomic/btn-back'
-import Calendar from 'src/components/atomic/api-calendar'
-import Hours from 'src/components/atomic/api-hours'
+import ButtonBack from 'src/components/atomic/SpeedDialButton'
+import Calendar from 'src/components/molecules/SchedulingCalendar'
+import Hours from 'src/components/molecules/SchedulingHours'
 import Confirm from 'src/components/atomic/btn-confirm'
 
 const Attendance = () => {
@@ -21,7 +20,7 @@ const Attendance = () => {
     <Container>
       <Head>
         <h3>Agendamento Online</h3>
-        <Prefeitura />
+        <PrefectureLogo />
       </Head>
       <Att>
         <h4>Atendimento escolhido</h4>

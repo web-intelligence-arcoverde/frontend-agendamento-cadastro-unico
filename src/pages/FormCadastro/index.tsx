@@ -2,6 +2,7 @@ import React from 'react'
 import { Button } from '@material-ui/core'
 import Input from 'components/atomic/TextField/Outlined'
 import Select from 'components/atomic/TextField/Select'
+import { useSelector } from 'react-redux'
 import { Container, ContainerButtons } from './styled'
 
 const currencies = [
@@ -31,6 +32,9 @@ const Form = () => {
 
   const [cpf, setCpf] = React.useState('')
   const [phone, setPhone] = React.useState('')
+
+  const teste = useSelector(state => state)
+  console.log(teste)
 
   return (
     <Container>

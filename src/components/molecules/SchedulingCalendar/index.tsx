@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { dates } from 'constants/calendar'
 import { Card, Container } from './styled'
-import CardComponent from 'src/components/atomic/btn-option'
+import CardComponent from 'src/components/atomic/CardButton'
 
 const Calendar = () => {
   const [visibleCard, setVisibleCard] = useState(false)
 
   const handleDate = (data, day) => {
+    console.log(day, data)
     setVisibleCard(true)
   }
 

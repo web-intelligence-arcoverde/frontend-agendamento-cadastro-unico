@@ -1,15 +1,9 @@
-import React from 'react'
-import { Container } from 'src/pages/Home/styled'
-import { Btn } from './styled'
+import { ButtonStyle } from './style'
 
-function Button({ onClick }: any) {
-  return (
-    <Container>
-      <Btn type="submit" onClick={onClick}>
-        CLIQUE AQUI PARA ENTRAR
-      </Btn>
-    </Container>
-  )
-}
+const Button = ({ onClick, label }: any) => (
+  <ButtonStyle type="submit" onClick={onClick}>
+    {label}
+  </ButtonStyle>
+)
 
 export default Button

@@ -4,22 +4,13 @@ import { COLORS } from 'src/constants';
 export const Container = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
-  p{
-    margin-top: 3px;
-    font-size: 17px;
-    font-weight: normal;
-  }
-  
-  button {
-    
-    background:${COLORS.thirdGreen};
+  text-align: center;
+
+  background:${COLORS.thirdGreen};
   color: ${COLORS.primaryWhite};
   height: 150px;
-  width: 95%;
-  text-align: center;
-  border: none;
   border-radius: 6px;
   font-size: 23px;
   font-weight: bold;
@@ -28,13 +19,19 @@ export const Container = styled.div`
     cursor: pointer;
     background-color: ${COLORS.secondGreen};
   }
+  
+  p{
+    margin-top: 3px;
+    font-size: 17px;
+    font-weight: normal;
   }
+  
 `
 
 
 /**span click aqui dentro btn-button */
 
-export const Click =styled.span`
+export const Click = styled.span`
 position: absolute;
 color: #FFF;
 margin-top: 16px;
@@ -47,4 +44,4 @@ padding: 6px;
 border-radius: 10px;
 
 `
-;
+  ;

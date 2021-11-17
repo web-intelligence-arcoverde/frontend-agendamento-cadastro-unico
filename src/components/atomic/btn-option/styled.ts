@@ -6,6 +6,12 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
+  p{
+    margin-top: 3px;
+    font-size: 17px;
+    font-weight: normal;
+  }
+  
   button {
     
     background:${COLORS.thirdGreen};

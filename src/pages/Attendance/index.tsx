@@ -1,5 +1,6 @@
 import Card from 'src/components/atomic/CardButton'
 import PrefectureLogo from 'components/molecules/PrefectureLogo'
+import { ReactComponent as ArrowIcon } from 'assets/icons/arrow.svg'
 import { Att, Container, Dates, Head, Horas } from './styled'
 import { useHistory } from 'react-router-dom'
 import ButtonBack from 'src/components/atomic/SpeedDialButton'
@@ -35,11 +36,13 @@ const Attendance = () => {
         <h4>Selecione a data</h4>
         <Calendar />
       </Dates>
+
       <Horas>
         <h4>Selecione o Horario</h4>
         <Hours />
       </Horas>
-      <ButtonBack onClick={handleOptions} />
+
+      <ButtonBack onClick={handleOptions} Icon={ArrowIcon} />
       <Confirm onClick={handleConfirm} />
     </Container>
   )

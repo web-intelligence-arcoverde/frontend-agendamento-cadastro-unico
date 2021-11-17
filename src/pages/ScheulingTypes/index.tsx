@@ -15,7 +15,7 @@ const Options = () => {
   const history = useHistory()
 
   const goTo = (go): any => {
-    history.push(go)
+    history.push(`/${go}`)
   }
   return (
     <Container>

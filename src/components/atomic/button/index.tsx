@@ -6,7 +6,7 @@ function Button({ onClick }: any) {
   return (
     <Container>
       <Btn type="submit" onClick={onClick}>
-        CLIQUE AQUI PARA ENTRAR{' '}
+        CLIQUE AQUI PARA ENTRAR
       </Btn>
     </Container>
   )

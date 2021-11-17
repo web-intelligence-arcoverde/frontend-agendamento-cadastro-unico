@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display:flex;
+   display:flex;
   flex-direction:column;
+  justify-content:space-between;
   align-items: center;
   height: auto;
-`;
+  width: 100%;
+ 
+  
+
+`
 
 export const Head =styled.div`
 text-align: center;
@@ -17,17 +22,15 @@ export const Att =styled.div`
 width: 95%;
 margin-bottom: 15px;
 
-h4{
+h3{
   text-align: start;
   margin: 5px;
   padding-left: 6px;
-}
-
-`
+}`
 export const Dates =styled.div`
-width: 95%;
-
-h4{
+width: 100%;
+margin-top: 20px;
+h3{
   text-align: start;
   margin: 5px;
   padding-left: 10px;
@@ -37,10 +40,11 @@ h4{
 `
 export const Horas =styled.div`
 width: 95%;
-margin: 20px;
+margin-bottom: 20px;
 
-h4{
+h3{
   text-align: start;
   margin: 5px;
   padding-left: 10px;
 }`
+;

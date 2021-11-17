@@ -7,6 +7,7 @@ import {
   Button,
 } from '@material-ui/core'
 import { Container, Btns } from './styled'
+import { useHistory } from 'react-router-dom'
 
 const CssTextField = withStyles({
   root: {
@@ -58,6 +59,10 @@ const Form = () => {
   const [currency, setCurrency] = React.useState('')
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCurrency(event.target.value)
+  }
+  const history = useHistory()
+  const handleCancel = () => {
+    history.push('options-atendimento')
   }
   const classes = useStyles()
   return (
@@ -129,7 +134,9 @@ const Form = () => {
         />
       </form>
       <Btns>
-        <Button color="secondary">Cancelar</Button>
+        <Button onClick={handleCancel} color="secondary">
+          Cancelar
+        </Button>
         <Button color="primary">Enviar</Button>
       </Btns>
     </Container>

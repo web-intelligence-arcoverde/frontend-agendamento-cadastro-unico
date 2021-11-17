@@ -1,6 +1,6 @@
 import React from 'react'
 import Social from 'src/components/atomic/ass-social'
-import { Container } from './styled'
+import { Bottom, Container, Space, Topo } from './styled'
 import Prefeitura from 'src/components/atomic/logo-prefeitura'
 import Card from 'src/components/atomic/btn-option'
 import { useHistory } from 'react-router-dom'
@@ -14,13 +14,26 @@ const Options = () => {
   const handleHome = () => {
     history.push('/')
   }
+  const handleRegistre = () => {
+    history.push('novo-cadastro')
+  }
   return (
     <Container>
-      <Prefeitura />
-      <Card onClick={handleAttendance} title="Atendimento" />
-      <Card title="Cadastro Novo" />
-      <Social />
+      <Topo>
+        <h3>Agendamento Online</h3>
+        <Prefeitura />
+      </Topo>
+      <Space>
+        <h4>Escolha o atendimento</h4>
+        <Card onClick={handleAttendance} title="Atendimento" />
+      </Space>
+      <Space>
+        <Card onClick={handleRegistre} title="Cadastro Novo" />
+      </Space>
       <ButtonBack onClick={handleHome} />
+      <Bottom>
+        <Social />
+      </Bottom>
     </Container>
   )
 }

@@ -5,8 +5,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
   
-  justify-content: space-around;
-  height: 100vh;
+  justify-content: space-between;
+  height: 97vh;
 
 `;

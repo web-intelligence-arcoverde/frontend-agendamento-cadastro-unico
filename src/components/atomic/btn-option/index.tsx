@@ -1,10 +1,13 @@
 import React from 'react'
 import { Click, Container } from './styled'
 
-const Card = ({ title }: any) => {
+const Card = ({ title, subtitle, onClick }: any) => {
   return (
     <Container>
-      <button>{title}</button>
+      <button type="submit" onClick={onClick}>
+        {title}
+        <p>{subtitle}</p>
+      </button>
     </Container>
   )
 }

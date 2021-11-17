@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 import Home from 'src/pages/Home'
 import Options from 'src/pages/Options'
 import Form from 'src/pages/FormCadastro'
+import Attendance from 'src/pages/Attendance'
 
 const Example = lazy(() =>
   import('src/pages/Example/Example').then(module => ({
@@ -21,6 +22,7 @@ export const Routes = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/options" component={Options} />
+        <Route path="/options-atendimento" component={Attendance} />
         <Route path="/formulario" component={Form} />
         <Route path="/404" component={GenericNotFound} />
         <Redirect to="/404" />

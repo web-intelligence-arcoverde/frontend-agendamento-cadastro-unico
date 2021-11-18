@@ -5,6 +5,7 @@ import ScheulingTypes from 'src/pages/ScheulingTypes'
 import Form from 'src/pages/FormCadastro'
 import Attendance from 'src/pages/Attendance'
 import Registre from 'src/pages/New-registre'
+import Admin from 'pages/Admin'
 import Login from 'pages/Login'
 const GenericNotFound = lazy(() =>
   import('src/pages/GenericNotFound/GenericNotFound').then(module => ({
@@ -18,6 +19,7 @@ export const Routes = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/scheuling-types" component={ScheulingTypes} />
+        <Route path="/admin" component={Admin} />
         <Route path="/atendimento" component={Attendance} />
         <Route path="/login" component={Login} />
         <Route path="/formulario" component={Form} />

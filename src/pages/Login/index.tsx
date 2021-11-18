@@ -2,9 +2,10 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import Input from 'components/atomic/TextField/Outlined'
 import { Button } from '@material-ui/core'
+import { LockOpen } from '@material-ui/icons'
 import { Container, StyleForm } from './styled'
 import Logo from 'assets/image/logo2.png'
-import { LockOpen } from '@material-ui/icons'
+
 import { Universal } from 'src/components/atomic/ButtonUniversal'
 import CalendarBack from 'assets/icons/calendarback.svg'
 

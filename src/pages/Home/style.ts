@@ -5,8 +5,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 80vh;
+  justify-content: space-around;
+  height: 100vh;
   
   :first-child{
     padding-top: 40px;
@@ -20,7 +20,7 @@ export const Container = styled.div`
     font-size: 35px;
     text-align: center;
     margin-top: 30px;
-    max-width: 15ch;
+    max-width: 20ch;
   }
 `;
 

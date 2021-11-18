@@ -11,7 +11,7 @@ import Confirm from 'src/components/atomic/BtnConfirm'
 const Attendance = () => {
   const history = useHistory()
   const handleOptions = () => {
-    history.push('options')
+    history.push('scheuling-types')
   }
   const handleConfirm = () => {
     history.push('formulario')

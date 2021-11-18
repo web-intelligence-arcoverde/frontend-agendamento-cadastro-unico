@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom'
 import ButtonBack from 'src/components/atomic/SpeedDialButton'
 import Calendar from 'src/components/molecules/SchedulingCalendar'
 import Hours from 'src/components/molecules/SchedulingHours'
-import Confirm from 'src/components/atomic/btn-confirm'
+import Confirm from 'src/components/atomic/BtnConfirm'
 
 const Attendance = () => {
   const history = useHistory()

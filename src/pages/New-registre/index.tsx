@@ -6,7 +6,7 @@ import PrefectureLogo from 'components/molecules/PrefectureLogo'
 import { Att, Head, Dates, Container, Horas } from './styled'
 import Calendar from 'src/components/molecules/SchedulingCalendar'
 import { useHistory } from 'react-router-dom'
-import Confirm from 'src/components/atomic/btn-confirm'
+import Confirm from 'src/components/atomic/BtnConfirm'
 
 const Registre = () => {
   const history = useHistory()

@@ -15,7 +15,7 @@ export const CardHours = styled.button`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 45%;
+  width: 43%;
   background: ${COLORS.thirdGreen};
   margin: 10px;
   margin-top: 3px;

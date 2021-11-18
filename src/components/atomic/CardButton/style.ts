@@ -7,10 +7,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-
+  margin: 0;
   background:${COLORS.thirdGreen};
   color: ${COLORS.primaryWhite};
-  height: 150px;
+  height: 120px;
   border-radius: 6px;
   font-size: 23px;
   font-weight: bold;

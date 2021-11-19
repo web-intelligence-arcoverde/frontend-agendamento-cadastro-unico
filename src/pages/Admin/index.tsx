@@ -15,8 +15,8 @@ import Scheduling from 'src/components/molecules/SchedulingPeding'
 
 const Admin = () => {
   const history = useHistory()
-  const handleLogout = () => {
-    history.push('login')
+  const goTo = (go: string): any => {
+    history.push(`/${go}`)
   }
 
   return (
@@ -26,9 +26,17 @@ const Admin = () => {
           <h3>Administração</h3>
         </div>
         <Perfil />
-        <Universal img={Logout} onClick={handleLogout} />
+        <Universal
+          img={Logout}
+          onClick={() => goTo('login')}
+          title="Atendimento"
+        />
         <ButtonAdm title="Usuários  Agendados" img={<Storage />} />
-        <ButtonAdm title="Cadastrar  Atendente" img={<PersonAdd />} />
+        <ButtonAdm
+          title="Cadastrar  Atendente"
+          img={<PersonAdd />}
+          onClick={() => goTo('register-attendance')}
+        />
         <ButtonAdm title="Tipos de Atendimentos" img={<InsertInvitation />} />
 
         <Peding>

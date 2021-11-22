@@ -1,13 +1,14 @@
-import { Container, IconSvg } from './styled'
+import { Container } from './styled'
 
-const SpeedDialButton = ({ onClick, Icon }: any) => {
+const SpeedDialButton = ({ img, onClick }: any) => {
   return (
-    <Container onClick={onClick}>
-      <IconSvg>
-        <Icon />
-      </IconSvg>
+    <Container>
+      <button onClick={onClick}>
+        <img src={img} />
+      </button>
     </Container>
   )
 }
+
 
 export default SpeedDialButton

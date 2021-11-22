@@ -4,7 +4,9 @@ export const Container = styled.div`
   display:flex;
   flex-direction:column;
   align-items: center;
-  height: auto;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
 `;
 
 export const Head =styled.div`
@@ -16,13 +18,6 @@ margin: 20px;
 export const Att =styled.div`
 width: 95%;
 margin-bottom: 15px;
-
-h4{
-  text-align: start;
-  margin: 5px;
-  padding-left: 6px;
-}
-
 `
 export const Dates =styled.div`
 width: 95%;

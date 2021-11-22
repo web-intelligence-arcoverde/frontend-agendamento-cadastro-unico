@@ -1,8 +1,7 @@
-import React from 'react'
 import { Container } from './styled'
 import Img from 'assets/icons/calendar.svg'
 
-const Confirm = ({ onClick }: any) => {
+const ButtonIcon = ({ onClick }: any) => {
   return (
     <Container>
       <button type="submit" onClick={onClick}>
@@ -13,4 +12,4 @@ const Confirm = ({ onClick }: any) => {
   )
 }
 
-export default Confirm
+export default ButtonIcon

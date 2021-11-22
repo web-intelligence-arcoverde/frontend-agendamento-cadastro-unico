@@ -1,19 +1,18 @@
-import { createStore, applyMiddleware, Store } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import { RepositoriesState } from './modules/user/types'
+import logger from 'redux-logger'
 
-import rootReducer from './modules/rootReducer'
-import rootSaga from './modules/rootSaga'
-
-export interface ApplicationState {
-  repositories: RepositoriesState
-}
+import rootReducers from './reducers/index'
+import rootSaga from './sagas/rootSagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const store: Store<ApplicationState> = createStore(
-  rootReducer,
-  applyMiddleware(sagaMiddleware),
+const middleware = [sagaMiddleware]
+
+const store = createStore(
+  rootReducers,
+  {},
+  applyMiddleware(...middleware, logger),
 )
 
 sagaMiddleware.run(rootSaga)

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
- display: flex;
- align-items: center;
-  width: 60%;
+  display: flex;
+  align-items: center;
   justify-content: center;
   
   h2 {
@@ -13,9 +12,5 @@ export const Container = styled.div`
   }
   span{
     font-weight: 600;
-  }
-  
-  img {
-    width: 120px;
   }
 `;

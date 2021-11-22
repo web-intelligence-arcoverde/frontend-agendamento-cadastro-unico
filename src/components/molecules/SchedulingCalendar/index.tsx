@@ -1,40 +1,29 @@
-import React, { useState } from 'react'
-import { dates } from 'constants/calendar'
-import { Card, Container } from './styled'
-import CardComponent from 'src/components/atomic/CardButton'
+import { useEffect } from 'react'
+import { Container } from './styled'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { loadAppointmentsRequest } from 'src/store/actions/appointmentsActions'
+
+import Loading from './Components/Loading'
+import CardOption from './Components/Card'
 
 const Calendar = () => {
-  const [visibleCard, setVisibleCard] = useState(false)
+  const dispatch = useDispatch()
 
-  const handleDate = (data, day) => {
-    console.log(day, data)
-    setVisibleCard(true)
-  }
+  const loading = useSelector(state => state.appointments.loading)
 
-  const handleRefresh = () => {
-    window.location.reload()
-  }
+  useEffect(() => {
+    dispatch(loadAppointmentsRequest())
+  }, [])
 
   return (
-    <Container>
-      {!visibleCard && (
-        <>
-          {dates.map(({ data, day }) => (
-            <Card type="submit" onClick={() => handleDate(data, day)}>
-              <h3>{data}</h3>
-              <p>{day}</p>
-            </Card>
-          ))}
-        </>
-      )}
-      {visibleCard && (
-        <CardComponent
-          onClick={handleRefresh}
-          title="12/11/2021"
-          subtitle="segunda-feita"
-        />
-      )}
-    </Container>
+    <div style={{ width: '100%' }}>
+      <div style={{ width: '100%' }}>
+        <h4>Selecione a data</h4>
+      </div>
+
+      <Container>{loading ? <Loading /> : <CardOption />}</Container>
+    </div>
   )
 }
 

@@ -1,40 +1,14 @@
 import React from 'react'
 import { Button } from '@material-ui/core'
 import Input from 'components/atomic/TextField/Outlined'
-import Select from 'components/atomic/TextField/Select'
 import { useSelector } from 'react-redux'
 import { Container, ContainerButtons } from './styled'
 
-const currencies = [
-  {
-    value: '1',
-    label: 'Cadastro',
-  },
-  {
-    value: '2',
-    label: 'Atualização',
-  },
-  {
-    value: '3',
-    label: 'Requisição',
-  },
-  {
-    value: '4',
-    label: 'Outros',
-  },
-]
-
 const Form = () => {
-  const [currency, setCurrency] = React.useState('')
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCurrency(event.target.value)
-  }
-
   const [cpf, setCpf] = React.useState('')
   const [phone, setPhone] = React.useState('')
 
   const teste = useSelector(state => state)
-  console.log(teste)
 
   return (
     <Container>
@@ -46,7 +20,7 @@ const Form = () => {
           padding: '20px',
           display: 'flex',
           flexDirection: 'column',
-          height: '80%',
+          height: '100%',
           justifyContent: 'space-between',
         }}
       >
@@ -55,12 +29,6 @@ const Form = () => {
         >
           <h1>Agendar</h1>
         </div>
-        <Select
-          label="Tipo de Atendimento?"
-          value={currency}
-          onChange={handleChange}
-          options={currencies}
-        />
 
         <Input
           label="Nome Completo"
@@ -98,16 +66,14 @@ const Form = () => {
 
         <ContainerButtons>
           <Button
-            color="secondary"
+            color="primary"
             variant="contained"
             disableElevation
-            style={{ marginBottom: '10px' }}
+            style={{ marginBottom: '20px', backgroundColor: 'green' }}
           >
-            Cancelar
-          </Button>
-          <Button color="primary" variant="contained" disableElevation>
             Enviar
           </Button>
+          <Button color="secondary">Cancelar</Button>
         </ContainerButtons>
       </form>
     </Container>

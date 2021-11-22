@@ -5,7 +5,7 @@ import { Button } from '@material-ui/core'
 import { Container, StyleForm } from './styled'
 import Logo from 'assets/image/logo2.png'
 import { LockOpen } from '@material-ui/icons'
-import { Universal } from 'src/components/atomic/ButtonUniversal'
+import Universal  from 'src/components/atomic/SpeedDialButton'
 import CalendarBack from 'assets/icons/calendarback.svg'
 
 const Login = () => {

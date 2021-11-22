@@ -1,5 +1,5 @@
 import { useHistory } from 'react-router-dom'
-import Arrow from 'assets/icons/password.svg'
+import  ArrowIcon from 'assets/icons/password.svg'
 
 import { TitleCard } from 'components/atomic/Typography'
 import Card from 'src/components/atomic/CardButton'
@@ -7,8 +7,10 @@ import Card from 'src/components/atomic/CardButton'
 import Social from 'src/components/molecules/SocialAssistanceLogo'
 import PrefectureLogo from 'components/molecules/PrefectureLogo'
 
-import { Header, Container } from './style'
-import { Universal } from 'src/components/atomic/ButtonUniversal'
+import {  Container } from './style'
+import SpeedDialButton from 'src/components/atomic/SpeedDialButton'
+
+import { Divider } from '../Home/style'
 
 const Options = () => {
   const history = useHistory()
@@ -18,22 +20,24 @@ const Options = () => {
   }
   return (
     <Container>
-      <Header>
-        <PrefectureLogo />
-      </Header>
+      <PrefectureLogo />
+      
       <div style={{ width: '100%' }}>
+      
         <TitleCard style={{ marginBottom: '10px' }}>
           Escolha o atendimento
         </TitleCard>
 
-        <Card onClick={() => goTo('atendimento')} title="Atendimento" />
-      </div>
-      <div style={{ margin: '10px', width: '100%' }}>
-        <Card onClick={() => goTo('novo-cadastro')} title="Cadastro Novo" />
+        <Card onClick={() => goTo('atendimento')} title="Atualização de cadastro" />
+        <Divider />
+        <Card onClick={() => goTo('novo-cadastro')} title="Cadastro Novo/Transferência" />
+      
       </div>
 
       <Social />
-      <Universal onClick={() => goTo('login')} img={Arrow} />
+
+      <SpeedDialButton onClick={() => goTo('login')} img={ArrowIcon} />
+  
     </Container>
   )
 }

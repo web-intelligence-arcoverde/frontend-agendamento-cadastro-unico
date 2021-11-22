@@ -3,7 +3,7 @@ import { COLORS } from 'src/constants';
 
 export const Title = styled.h1`
   color: ${COLORS.primaryOrange};
-  font-size: 36px;
+  font-size: 32px;
 `
 
 

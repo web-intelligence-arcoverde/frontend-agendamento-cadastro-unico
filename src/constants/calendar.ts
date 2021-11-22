@@ -3,7 +3,7 @@ type CalendarExampleType = {
   day: string
 }[]
 
-export const dates: CalendarExampleType = [
+const dates: CalendarExampleType = [
   {
     data: '11/11/2021',
     day: 'quinta-feira',
@@ -53,3 +53,5 @@ export const dates: CalendarExampleType = [
     day: 'sexta-feira',
   },
 ]
+
+export default dates

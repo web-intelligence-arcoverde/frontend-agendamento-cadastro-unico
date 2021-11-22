@@ -1,33 +1,31 @@
-import React, { useState } from 'react'
+import { useEffect } from 'react'
 
-import { Container, CardHours } from './styled'
-import CardComponent from 'src/components/atomic/CardButton'
-import { apiHours } from 'src/constants/hours'
+import { Container } from './styled'
+
+import { useDispatch, useSelector } from 'react-redux'
+
+import HoursList from './Components/ListHours'
+import Loading from '../SchedulingCalendar/Components/Loading'
+
+import { loadAppointmentsHoursRequest } from 'src/store/actions/appointmentsActions'
 
 const Hours = () => {
-  const [visibleCard, setVisibleCard] = useState(false)
+  const dispatch = useDispatch()
+  const selectedDateVisible = useSelector(
+    state => state.appointments.selectedDateVisible,
+  )
 
-  const handleDate = () => {
-    setVisibleCard(true)
-  }
-
-  const handleRefresh = () => {
-    window.location.reload()
-  }
+  useEffect(() => {
+    dispatch(loadAppointmentsHoursRequest())
+  }, [])
 
   return (
-    <Container>
-      {!visibleCard && (
-        <>
-          {apiHours.map(({ hours }) => (
-            <CardHours type="submit" onClick={() => handleDate()}>
-              <h2>{hours}</h2>
-            </CardHours>
-          ))}
-        </>
-      )}
-      {visibleCard && <CardComponent onClick={handleRefresh} title="12:00" />}
-    </Container>
+    <div style={{ width: '100%' }}>
+      <div style={{ width: '100%' }}>
+        <h4>Selecione o Horario</h4>
+      </div>
+      <Container>{selectedDateVisible ? <HoursList /> : <></>}</Container>
+    </div>
   )
 }
 

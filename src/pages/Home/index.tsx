@@ -1,4 +1,4 @@
-import { Container, ContainerButton } from './style'
+import { Container, Divider } from './style'
 
 import Button from 'src/components/atomic/Button'
 import { Title } from 'src/components/atomic/Typography'
@@ -11,17 +11,23 @@ import { useHistory } from 'react-router-dom'
 const Home = () => {
   const history = useHistory()
   const handleOptions = () => {
-    history.push('/scheuling-types')
+    history.push('/tipos-agendamentos')
   }
+
   return (
     <Container>
       <PrefectureLogo />
 
-      <Title>Sistema de Agendamento Online</Title>
+      <div
+        style={{ width: '100%', textAlign: 'center', justifyContent: 'center' }}
+      >
+        <Title>Sistema de agendamento online</Title>
 
-      <ContainerButton>
+        <Divider />
+
         <Button onClick={handleOptions} label={'CLIQUE AQUI PARA ENTRAR'} />
-      </ContainerButton>
+      </div>
+
       <Social />
     </Container>
   )

@@ -10,9 +10,9 @@ export const Container = styled.div`
   margin: 0;
   background:${COLORS.thirdGreen};
   color: ${COLORS.primaryWhite};
-  height: 120px;
+  height: 100px;
   border-radius: 6px;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: bold;
   
   :hover{

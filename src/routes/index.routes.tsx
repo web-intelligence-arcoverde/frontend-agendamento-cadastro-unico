@@ -8,6 +8,8 @@ import Registre from 'src/pages/New-registre'
 import Admin from 'pages/Admin'
 import Login from 'pages/Login'
 import RegisterAtt from 'src/pages/RegisterAttendance'
+import AttendanceTypes from 'src/pages/AttendanceTypes'
+import ScheduledUsers from 'src/pages/ScheduledUsers'
 const GenericNotFound = lazy(() =>
   import('src/pages/GenericNotFound/GenericNotFound').then(module => ({
     default: module.GenericNotFound,
@@ -22,6 +24,8 @@ export const Routes = () => {
         <Route path="/scheuling-types" component={ScheulingTypes} />
         <Route path="/admin" component={Admin} />
         <Route path="/atendimento" component={Attendance} />
+        <Route path="/types-attendance" component={AttendanceTypes} />
+        <Route path="/scheuling-users" component={ScheduledUsers} />
         <Route path="/login" component={Login} />
         <Route path="/register-attendance" component={RegisterAtt} />
         <Route path="/formulario" component={Form} />

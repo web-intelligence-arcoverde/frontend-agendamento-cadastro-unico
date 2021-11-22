@@ -4,8 +4,9 @@ import React from 'react'
 import { Universal } from 'src/components/atomic/ButtonUniversal'
 import Admin from 'assets/icons/admin2.svg'
 import { useHistory } from 'react-router-dom'
-import { Switch } from '@material-ui/core'
+import { IconButton } from '@material-ui/core'
 import ButtonForm from 'src/components/atomic/ButtonForm'
+import BtnSwitch from 'src/components/atomic/BtnSwitch'
 
 const RegisterAtt = () => {
   const [phone, setPhone] = React.useState('')
@@ -19,13 +20,9 @@ const RegisterAtt = () => {
       <div style={{ textAlign: 'center', margin: '15px' }}>
         <h3 style={{ fontWeight: 500 }}>Cadastro de Atendente</h3>
       </div>
+
       <Form noValidate autoComplete="off">
-        <Input
-          accept="image/*"
-          id="contained-button-file"
-          multiple
-          type="file"
-        />
+        <Input accept="image/*" id="icon-button-file" type="file" />
         <Input label="Email" variant="outlined" color="primary" required />
 
         <Input
@@ -46,11 +43,11 @@ const RegisterAtt = () => {
         />
         <Selector>
           <h3>Atendente é Administrador ?</h3>
-          <Switch {...label} size="medium" color="primary" />
+          <BtnSwitch />
         </Selector>
         <Selector>
           <h3>Atendente será Ativo? </h3>
-          <Switch {...label} size="medium" color="primary" />
+          <BtnSwitch />
         </Selector>
         <Btns>
           <ButtonForm title="Cancelar" onClick={() => goTo('admin')} />

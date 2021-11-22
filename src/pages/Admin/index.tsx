@@ -31,13 +31,21 @@ const Admin = () => {
           onClick={() => goTo('login')}
           title="Atendimento"
         />
-        <ButtonAdm title="Usuários  Agendados" img={<Storage />} />
+        <ButtonAdm
+          title="Usuários  Agendados"
+          img={<Storage />}
+          onClick={() => goTo('scheuling-users')}
+        />
         <ButtonAdm
           title="Cadastrar  Atendente"
           img={<PersonAdd />}
           onClick={() => goTo('register-attendance')}
         />
-        <ButtonAdm title="Tipos de Atendimentos" img={<InsertInvitation />} />
+        <ButtonAdm
+          title="Tipos de Atendimentos"
+          img={<InsertInvitation />}
+          onClick={() => goTo('types-attendance')}
+        />
 
         <Peding>
           <h2>Agendamentos Pendentes</h2>

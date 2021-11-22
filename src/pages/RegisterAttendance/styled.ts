@@ -19,6 +19,8 @@ width: 95%;
 }
 
 `
+
+
 export const Selector=styled.div`
 display: flex;
 align-items: center;

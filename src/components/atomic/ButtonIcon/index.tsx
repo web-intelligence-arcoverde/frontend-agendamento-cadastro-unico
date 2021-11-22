@@ -5,8 +5,7 @@ const ButtonIcon = ({ onClick }: any) => {
   return (
     <Container>
       <button type="submit" onClick={onClick}>
-        <img src={Img} />
-        Confirmar Agendamento
+        Avançar
       </button>
     </Container>
   )

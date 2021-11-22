@@ -1,7 +1,7 @@
 import Card from 'src/components/atomic/CardButton'
 import PrefectureLogo from 'components/molecules/PrefectureLogo'
 
-import { Container, Horas } from './styled'
+import { Container } from './styled'
 import { useHistory } from 'react-router-dom'
 import Calendar from 'src/components/molecules/SchedulingCalendar'
 import Hours from 'src/components/molecules/SchedulingHours'

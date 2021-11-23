@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-
+import styled from 'styled-components'
 
 export const Container = styled.div`
   height: 100vh;
@@ -9,11 +8,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-
   justify-content: space-between;
 
   padding: 20px;
-`;
+`
 
 export const Divider = styled.div`
   height: 22px;

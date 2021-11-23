@@ -1,5 +1,4 @@
-import React from 'react'
-import { Universal } from 'src/components/atomic/ButtonUniversal'
+import Universal from 'src/components/atomic/Button'
 import Perfil from 'src/components/molecules/Perfil'
 import { MiniContainer, Card, Peding, Config } from './styled'
 import Logout from 'assets/icons/logout.svg'

@@ -1,7 +1,7 @@
 import { Btns, Container, Form, Selector } from './styled'
 import Input from 'components/atomic/TextField/Outlined'
 import React from 'react'
-import { Universal } from 'src/components/atomic/ButtonUniversal'
+import Universal from 'src/components/atomic/Button'
 import Admin from 'assets/icons/admin2.svg'
 import { useHistory } from 'react-router-dom'
 import { IconButton } from '@material-ui/core'

@@ -1,49 +1,53 @@
 import Card from 'src/components/atomic/CardButton'
 import PrefectureLogo from 'components/molecules/PrefectureLogo'
-import { ReactComponent as ArrowIcon } from 'assets/icons/arrow.svg'
-import { Att, Container, Dates, Head, Horas } from './styled'
+
+import { Container } from './styled'
 import { useHistory } from 'react-router-dom'
-import ButtonBack from 'src/components/atomic/SpeedDialButton'
 import Calendar from 'src/components/molecules/SchedulingCalendar'
 import Hours from 'src/components/molecules/SchedulingHours'
-import Confirm from 'src/components/atomic/BtnConfirm'
+import ButtonIcon from 'src/components/atomic/ButtonIcon'
 
 const Attendance = () => {
   const history = useHistory()
   const handleOptions = () => {
-    history.push('options')
+    history.push('scheuling-types')
   }
+
   const handleConfirm = () => {
     history.push('formulario')
   }
 
   return (
     <Container>
-      <Head>
-        <h3>Agendamento Online</h3>
-        <PrefectureLogo />
-      </Head>
-      <Att>
+      <PrefectureLogo />
+
+      <div
+        style={{
+          display: 'flex',
+          width: '100%',
+          flexDirection: 'column',
+          marginTop: '20px',
+        }}
+      >
         <h4>Atendimento escolhido</h4>
+        <div style={{ marginTop: '10px' }} />
         <Card
           title="Atendimento"
           subtitle="Todos os horários não agendados"
           onClick={handleOptions}
         />
-      </Att>
+      </div>
 
-      <Dates>
-        <h4>Selecione a data</h4>
-        <Calendar />
-      </Dates>
+      <div style={{ marginTop: '20px' }} />
+      <Calendar />
 
-      <Horas>
-        <h4>Selecione o Horario</h4>
-        <Hours />
-      </Horas>
+      <div style={{ marginTop: '20px' }} />
+      <Hours />
 
-      <ButtonBack onClick={handleOptions} Icon={ArrowIcon} />
-      <Confirm onClick={handleConfirm} />
+      <ButtonIcon onClick={handleConfirm} />
+      <div style={{ width: '100%', height: '20px', color: '#fff' }}>
+        Web Intelligence
+      </div>
     </Container>
   )
 }

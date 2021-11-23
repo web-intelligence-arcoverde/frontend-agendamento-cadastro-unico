@@ -1,11 +1,14 @@
 import { Container } from './styled'
+import Img from 'assets/icons/calendar.svg'
 
-export const Universal = ({ img, onClick }: any) => {
+const ButtonIcon = ({ onClick }: any) => {
   return (
     <Container>
       <button type="submit" onClick={onClick}>
-        <img src={img} />
+        Avançar
       </button>
     </Container>
   )
 }
+
+export default ButtonIcon

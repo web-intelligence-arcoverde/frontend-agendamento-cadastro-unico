@@ -1,17 +1,21 @@
-import styled from 'styled-components';
 import { COLORS } from 'src/constants';
+import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: block;
-  padding: 0;
+position: absolute;
+bottom: 8%;
+
+button {
+  padding: 10px;
   border-radius: 100%;
-  border: none;
+  border:none;
+  background-color: ${COLORS.thirdGreen};
   position: fixed;
-  bottom:2%;
-  right: 5%;
+  right: 3%;
+}
+  
+img {
+  width: 20px;
+}
+
 `;
-
-
-export const IconSvg = styled.div`
- width: 50px;
-`

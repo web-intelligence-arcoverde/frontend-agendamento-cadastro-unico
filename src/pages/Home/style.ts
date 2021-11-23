@@ -1,29 +1,19 @@
-import styled from 'styled-components';
-import { COLORS } from 'src/constants';
+import styled from 'styled-components'
+
 export const Container = styled.div`
+  height: 100vh;
   width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  height: 100vh;
-  
-  :first-child{
-    padding-top: 40px;
-  }
-  
-  :last-child{
-    padding-bottom: 40px;
-  }
-  h1 {
-    color: ${COLORS.primaryOrange};
-    font-size: 35px;
-    text-align: center;
-    margin-top: 30px;
-    max-width: 20ch;
-  }
-`;
 
-export const ContainerButton = styled.div`
-  width: 90%;
+  justify-content: space-between;
+
+  padding: 20px;
+`
+
+export const Divider = styled.div`
+  height: 22px;
+  width: 100%;
 `

@@ -1,8 +1,7 @@
-import React from 'react'
 import Users from 'src/components/molecules/Users'
 import CalendarBack from 'assets/icons/calendarback.svg'
 import { Container } from './styled'
-import { Universal } from 'src/components/atomic/ButtonUniversal'
+import Universal from 'src/components/atomic/Button'
 import { useHistory } from 'react-router-dom'
 
 const ScheduledUsers = () => {

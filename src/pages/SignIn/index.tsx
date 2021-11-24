@@ -1,23 +1,33 @@
 import { useHistory } from 'react-router-dom'
 import Input from 'components/atomic/TextField/Outlined'
-import { Button } from '@material-ui/core'
-import { LockOpen } from '@material-ui/icons'
-import { Container, StyleForm } from './styled'
+import Button from 'components/atomic/Button'
+
+import { Container, Form } from './styled'
 import Logo from 'assets/image/logo2.png'
 import Universal from 'src/components/atomic/SpeedDialButton'
 import CalendarBack from 'assets/icons/calendarback.svg'
 
+import { signInRequest } from 'src/store/sagas/auth'
+import { useDispatch } from 'react-redux'
+
 const Login = () => {
   const history = useHistory()
-  const handleOptions = () => {
-    history.push('/scheuling-types')
+
+  const dispatch = useDispatch()
+
+  const signIn = e => {
+    e.preventDefault()
+    console.log('teste')
+    //dispatch(signInRequest())
   }
 
   return (
     <Container>
       <img src={Logo} width="40%" />
+      <div style={{ marginTop: '22px' }} />
       <h1>Acesso Exclusivo</h1>
-      <StyleForm noValidate autoComplete="off">
+      <Form noValidate autoComplete="off" onSubmit={signIn}>
+        <div style={{ marginTop: '22px' }} />
         <Input
           label="Email"
           variant="outlined"
@@ -25,7 +35,7 @@ const Login = () => {
           required
           type="text"
         />
-
+        <div style={{ marginTop: '22px' }} />
         <Input
           label="Senha"
           variant="outlined"
@@ -33,20 +43,10 @@ const Login = () => {
           required
           type="password"
         />
-        <Button
-          variant="outlined"
-          fullWidth
-          startIcon={<LockOpen />}
-          style={{
-            backgroundColor: '#38a533',
-            color: '#fff',
-            height: '55px',
-          }}
-        >
-          Entrar
-        </Button>
-      </StyleForm>
-      <Universal img={CalendarBack} onClick={handleOptions} />
+        <div style={{ marginTop: '22px' }} />
+        <Button label="Entrar" />
+      </Form>
+      <Universal img={CalendarBack} />
     </Container>
   )
 }

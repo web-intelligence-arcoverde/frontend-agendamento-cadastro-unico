@@ -1,36 +1,36 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export const MiniContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15px;
-  
-
-`;
-export const Peding =styled.div`
-margin-top: 20px;
-border-top:1px solid #8080806b ;
-width: 90%;
-text-align: center;
-padding-top: 20px;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
 `
-export const Card =styled.div`
-display: flex;
-flex-direction: column;
-margin-left: 20px;
 
+export const MiniContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `
-export const Config =styled.div`
-width: 70%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin-left: 15%;
+export const Peding = styled.div`
+  border-top: 1px solid #8080806b;
+  width: 100%;
+  text-align: center;
+`
+export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+export const Config = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-h2 {
-  margin: 20px;
-}
+  h2 {
+    margin: 20px;
+  }
 `

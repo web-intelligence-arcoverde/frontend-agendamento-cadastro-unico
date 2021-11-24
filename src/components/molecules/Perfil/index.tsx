@@ -1,13 +1,17 @@
 import Admin from 'assets/icons/admin.svg'
-import { Card, Container } from './styled'
+import { CircleAvatar, Container } from './styled'
 
 const Perfil = () => {
+  const imgLink = Admin
+  const userName = 'Atendente 6'
+
   return (
     <Container>
-      <Card>
-        <img src={Admin} />
-      </Card>
-      <h2>Atendente 6</h2>
+      <h2>Dashboard</h2>
+      <CircleAvatar>
+        <img src={imgLink} />
+      </CircleAvatar>
+      <h3>{userName}</h3>
     </Container>
   )
 }

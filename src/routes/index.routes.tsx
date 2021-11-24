@@ -6,7 +6,7 @@ import Form from 'src/pages/FormCadastro'
 import Attendance from 'src/pages/Attendance'
 import Registre from 'src/pages/New-registre'
 import Admin from 'pages/Admin'
-import Login from 'pages/Login'
+import Login from 'src/pages/SignIn'
 import RegisterAtt from 'src/pages/RegisterAttendance'
 import AttendanceTypes from 'src/pages/AttendanceTypes'
 import ScheduledUsers from 'src/pages/ScheduledUsers'
@@ -21,7 +21,7 @@ export const Routes = () => {
     <Suspense fallback={<p>Carregando...</p>}>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/scheuling-types" component={ScheulingTypes} />
+        <Route path="/tipos-agendamentos" component={ScheulingTypes} />
         <Route path="/admin" component={Admin} />
         <Route path="/atendimento" component={Attendance} />
         <Route path="/types-attendance" component={AttendanceTypes} />

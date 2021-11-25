@@ -11,6 +11,7 @@ import {
   Settings,
 } from '@material-ui/icons'
 import Scheduling from 'src/components/molecules/SchedulingPeding'
+import MenuConfig from 'src/components/molecules/MenuConfig'
 
 const Admin = () => {
   const history = useHistory()
@@ -72,10 +73,11 @@ const Admin = () => {
           number="87991417395"
         />
       </Card>
-      <Config>
+      <Config style={{ marginBottom: '20px' }}>
         <h2>Agendamentos Concluídos</h2>
         <ButtonAdm title="Abrir Configurações" img={<Settings />} />
       </Config>
+      <MenuConfig />
     </>
   )
 }

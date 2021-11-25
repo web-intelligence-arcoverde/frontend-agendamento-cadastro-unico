@@ -10,6 +10,8 @@ import Login from 'pages/Login'
 import RegisterAtt from 'src/pages/RegisterAttendance'
 import AttendanceTypes from 'src/pages/AttendanceTypes'
 import ScheduledUsers from 'src/pages/ScheduledUsers'
+import Clerks from 'src/components/atomic/Clerks'
+
 const GenericNotFound = lazy(() =>
   import('src/pages/GenericNotFound/GenericNotFound').then(module => ({
     default: module.GenericNotFound,
@@ -29,6 +31,7 @@ export const Routes = () => {
         <Route path="/login" component={Login} />
         <Route path="/register-attendance" component={RegisterAtt} />
         <Route path="/formulario" component={Form} />
+        <Route path="/pag1" component={Clerks} />
         <Route path="/novo-cadastro" component={Registre} />
         <Route path="/404" component={GenericNotFound} />
         <Redirect to="/404" />

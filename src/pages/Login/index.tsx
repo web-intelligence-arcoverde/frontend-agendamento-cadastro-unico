@@ -10,7 +10,7 @@ import CalendarBack from 'assets/icons/calendarback.svg'
 const Login = () => {
   const history = useHistory()
   const handleOptions = () => {
-    history.push('/scheuling-types')
+    history.push('/tipos-agendamentos')
   }
 
   return (

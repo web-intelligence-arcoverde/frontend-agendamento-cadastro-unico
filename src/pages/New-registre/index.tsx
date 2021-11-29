@@ -37,7 +37,6 @@ const Registre = () => {
         <Card title="9:00 horas" />
       </Horas>
 
-      <ButtonBack onClick={() => goTo('options')} Icon={ArrowIcon} />
       <Confirm onClick={() => goTo('formulario')} />
     </Container>
   )

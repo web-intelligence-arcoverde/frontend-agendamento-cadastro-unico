@@ -10,7 +10,7 @@ import Login from 'pages/Login'
 import RegisterAtt from 'src/pages/RegisterAttendance'
 import AttendanceTypes from 'src/pages/AttendanceTypes'
 import ScheduledUsers from 'src/pages/ScheduledUsers'
-import Clerks from 'src/components/atomic/Clerks'
+import Clerks from 'src/components/atomic/Attendants'
 
 const GenericNotFound = lazy(() =>
   import('src/pages/GenericNotFound/GenericNotFound').then(module => ({
@@ -23,13 +23,13 @@ export const Routes = () => {
     <Suspense fallback={<p>Carregando...</p>}>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/scheuling-types" component={ScheulingTypes} />
+        <Route path="/tipos-agendamentos" component={ScheulingTypes} />
         <Route path="/admin" component={Admin} />
         <Route path="/atendimento" component={Attendance} />
-        <Route path="/types-attendance" component={AttendanceTypes} />
-        <Route path="/scheuling-users" component={ScheduledUsers} />
+        <Route path="/tipos-atendimentos" component={AttendanceTypes} />
+        <Route path="/usuarios-agendandos" component={ScheduledUsers} />
         <Route path="/login" component={Login} />
-        <Route path="/register-attendance" component={RegisterAtt} />
+        <Route path="/cadastrar-atendente" component={RegisterAtt} />
         <Route path="/formulario" component={Form} />
         <Route path="/pag1" component={Clerks} />
         <Route path="/novo-cadastro" component={Registre} />

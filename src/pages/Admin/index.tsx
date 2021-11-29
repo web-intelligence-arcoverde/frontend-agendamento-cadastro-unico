@@ -4,6 +4,7 @@ import { MiniContainer, Card, Peding, Config } from './styled'
 import Logout from 'assets/icons/logout.svg'
 import { useHistory } from 'react-router-dom'
 import ButtonAdm from 'src/components/atomic/ButtonAdm'
+import { useState } from 'react'
 import {
   Storage,
   PersonAdd,
@@ -18,7 +19,11 @@ const Admin = () => {
   const goTo = (go: string): any => {
     history.push(`/${go}`)
   }
-
+  const [optionComponent, setOptionComponent] = useState('default')
+  const Components = {
+    default: <div />,
+    menu: <MenuConfig />,
+  }
   return (
     <>
       <MiniContainer>
@@ -26,25 +31,21 @@ const Admin = () => {
           <h3>Administração</h3>
         </div>
         <Perfil />
-        <Universal
-          img={Logout}
-          onClick={() => goTo('login')}
-          title="Atendimento"
-        />
+
         <ButtonAdm
           title="Usuários  Agendados"
           img={<Storage />}
-          onClick={() => goTo('scheuling-users')}
+          onClick={() => goTo('usuarios-agendandos')}
         />
         <ButtonAdm
           title="Cadastrar  Atendente"
           img={<PersonAdd />}
-          onClick={() => goTo('register-attendance')}
+          onClick={() => goTo('cadastrar-atendente')}
         />
         <ButtonAdm
           title="Tipos de Atendimentos"
           img={<InsertInvitation />}
-          onClick={() => goTo('types-attendance')}
+          onClick={() => goTo('tipos-atendimentos')}
         />
 
         <Peding>
@@ -75,9 +76,13 @@ const Admin = () => {
       </Card>
       <Config style={{ marginBottom: '20px' }}>
         <h2>Agendamentos Concluídos</h2>
-        <ButtonAdm title="Abrir Configurações" img={<Settings />} />
+        <ButtonAdm
+          title="Abrir Configurações"
+          img={<Settings />}
+          onClick={() => setOptionComponent('menu')}
+        />
       </Config>
-      <MenuConfig />
+      {Components[optionComponent]}
     </>
   )
 }

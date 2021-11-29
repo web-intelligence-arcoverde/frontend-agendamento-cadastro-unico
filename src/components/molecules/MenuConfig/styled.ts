@@ -35,20 +35,19 @@ button {
   
   
   
+  
   :hover{
     color:${COLORS.ForGreen} ;
     background-color: ${COLORS.primaryWhite};
+    box-shadow: 1px 1px 1px 1px gray;
     
   }
   :focus{
        color:${COLORS.ForGreen} ;
     background-color: ${COLORS.primaryWhite};
+      box-shadow:  1px 1px 1px 1px gray;
   }
   
   
 }
-`
-export const SClick =styled.div`
-order: 2;
-
 `

@@ -4,7 +4,7 @@ import { Card, Container } from './styled'
 
 import { Checkbox } from '@material-ui/core'
 
-const Clerks = () => {
+const Attendants = () => {
   const list = Clerk.map(atendente => {
     return (
       <Card>
@@ -15,7 +15,7 @@ const Clerks = () => {
   })
   return (
     <Container>
-      <h2> Atendentes </h2>
+      <h2> Atendentes</h2>
       <div>
         <p>{list}</p>
       </div>
@@ -23,4 +23,4 @@ const Clerks = () => {
   )
 }
 
-export default Clerks
+export default Attendants

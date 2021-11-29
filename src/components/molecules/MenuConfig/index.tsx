@@ -1,15 +1,22 @@
+import { type } from '@testing-library/user-event/dist/type'
 import { useState } from 'react'
-
-import Clerks from 'src/components/atomic/Clerks'
-import { Container, Menu, SClick, Title } from './styled'
+import Attendants from 'src/components/atomic/Attendants'
+import Dates from 'src/components/atomic/Dates'
+import Day from 'src/components/atomic/Day'
+import Hours from 'src/components/atomic/Hours'
+import NineHours from 'src/components/NineHours'
+import { Container, Menu, Title } from './styled'
 
 const MenuConfig = () => {
   const [optionComponent, setOptionComponent] = useState('default')
 
   const Components = {
-    data: <ComponentData />,
-    dia: <div />,
-    h: <div />,
+    data: <Dates />,
+    dia: <Day />,
+    h: <Hours />,
+    a: <Attendants />,
+    default: <div />,
+    nine: <NineHours />,
   }
 
   return (
@@ -22,18 +29,10 @@ const MenuConfig = () => {
         <button onClick={() => setOptionComponent('data')}>DT</button>
         <button onClick={() => setOptionComponent('dia')}>D</button>
         <button onClick={() => setOptionComponent('h')}>H</button>
-        <button onClick={() => setOptionComponent('default')}>HE</button>
+        <button onClick={() => setOptionComponent('nine')}>HE</button>
       </Menu>
       {Components[optionComponent]}
     </Container>
-  )
-}
-
-const ComponentData = () => {
-  return (
-    <SClick>
-      <Clerks />
-    </SClick>
   )
 }
 

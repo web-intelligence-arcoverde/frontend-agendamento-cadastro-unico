@@ -18,10 +18,6 @@ const Calendar = () => {
 
   return (
     <div style={{ width: '100%' }}>
-      <div style={{ width: '100%' }}>
-        <h4>Selecione a data</h4>
-      </div>
-
       <Container>{loading ? <Loading /> : <CardOption />}</Container>
     </div>
   )

@@ -4,9 +4,10 @@ import { COLORS } from 'src/constants';
 export const Container = styled.div`
    width: 100%;
     display: flex;
-   
+    justify-content: center;
+    align-items: center;
   button {
-    width: 100%;
+    width: 70%;
     height: 48px;
     border-radius: 6px;
     border: none;
@@ -17,6 +18,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
   }
   img {
     width: 20px;

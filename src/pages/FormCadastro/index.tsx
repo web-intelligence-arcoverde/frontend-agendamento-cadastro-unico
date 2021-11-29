@@ -3,12 +3,16 @@ import { Button } from '@material-ui/core'
 import Input from 'components/atomic/TextField/Outlined'
 import { useSelector } from 'react-redux'
 import { Container, ContainerButtons } from './styled'
+import { useHistory } from 'react-router-dom'
 
 const Form = () => {
   const [cpf, setCpf] = React.useState('')
   const [phone, setPhone] = React.useState('')
-
   const teste = useSelector(state => state)
+  const history = useHistory()
+  const handleCancel = () => {
+    history.push('atendimento')
+  }
 
   return (
     <Container>
@@ -73,7 +77,9 @@ const Form = () => {
           >
             Enviar
           </Button>
-          <Button color="secondary">Cancelar</Button>
+          <Button color="secondary" onClick={handleCancel}>
+            Cancelar
+          </Button>
         </ContainerButtons>
       </form>
     </Container>

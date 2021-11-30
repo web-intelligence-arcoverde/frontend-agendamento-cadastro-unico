@@ -1,37 +1,33 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-export const Form =styled.form`
-width: 95%;
 
+  padding: 20px;
+`
+export const Form = styled.form`
+  width: 100%;
 
-.MuiInputBase-root{
-  margin-bottom: 20px;
-  background-color: #f7f2f2;
- :hover{
-   background-color:#f1dedecc;
- }
-
-}
-
+  .MuiInputBase-root {
+    background-color: #fff;
+    :hover {
+      background-color: #fff;
+    }
+  }
 `
 
-
-export const Selector=styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
+export const Selector = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `
-export const Btns =styled.div`
-margin: 30px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-text-align: center;
-
-
+export const Btns = styled.div`
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
 `

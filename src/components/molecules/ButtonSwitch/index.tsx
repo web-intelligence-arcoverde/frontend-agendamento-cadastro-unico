@@ -1,5 +1,4 @@
-import React from 'react'
-import BtnSwitch from 'src/components/atomic/BtnSwitch'
+import Checkbox from 'src/components/atomic/Checkbox'
 import { Container, Selector } from './styled'
 
 // import { Container } from './styles';
@@ -9,7 +8,7 @@ const ButtonSwitch = ({ title }: any) => {
     <Container>
       <Selector>
         <h4>{title}</h4>
-        <BtnSwitch />
+        <Checkbox />
       </Selector>
     </Container>
   )

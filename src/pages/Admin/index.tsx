@@ -1,5 +1,4 @@
 import Perfil from 'src/components/molecules/Perfil'
-import { Config } from './styled'
 
 import Button from 'src/components/atomic/Button'
 import { Settings } from '@material-ui/icons'

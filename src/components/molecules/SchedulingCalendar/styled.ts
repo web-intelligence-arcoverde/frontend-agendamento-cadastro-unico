@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { COLORS } from 'src/constants';
 
-export const Container =styled.div`
+export const Container = styled.div`
 display: flex;
 flex-wrap: wrap;
 margin-top: 5px;
@@ -17,8 +17,9 @@ export const Card = styled.button`
   justify-content: center;
   width: 45%;
   background: ${COLORS.thirdGreen};
-  margin: 10px;
-  margin-top: 3px;
+  margin: 10px 0px;
+  margin-left:10px;
+
   padding: 15px;
   color: ${COLORS.primaryWhite};
   border-radius: 7px;

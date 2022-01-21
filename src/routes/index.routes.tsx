@@ -17,7 +17,7 @@ export const Routes = () => {
     <Suspense fallback={<p>Carregando...</p>}>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/scheuling-types" component={ScheulingTypes} />
+        <Route path="/tipos-agendamento" component={ScheulingTypes} />
         <Route path="/opcoes-atendimento" component={Attendance} />
         <Route path="/formulario" component={Form} />
         <Route path="/novo-cadastro" component={Registre} />

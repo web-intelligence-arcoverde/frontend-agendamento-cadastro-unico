@@ -8,13 +8,13 @@ export const Container = styled.div`
     justify-content: space-around;
     margin-bottom: 30px;
   button {
-    width: 90%;
-    height: 40px;
-    border-radius: 12px;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
     border: none;
     color: ${COLORS.primaryWhite};
-    background:${COLORS.secondGreen};
-    font-size: 15px;
+     background: ${COLORS.thirdGreen};
+    font-size: 16px;
     font-weight: bold;
     display: flex;
     align-items: center;

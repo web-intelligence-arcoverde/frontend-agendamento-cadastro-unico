@@ -1,9 +1,7 @@
 import Card from 'src/components/atomic/CardButton'
 import PrefectureLogo from 'components/molecules/PrefectureLogo'
-import { ReactComponent as ArrowIcon } from 'assets/icons/arrow.svg'
 import { Att, Container, Dates, Head, Horas } from './styled'
 import { useHistory } from 'react-router-dom'
-import ButtonBack from 'src/components/atomic/SpeedDialButton'
 import Calendar from 'src/components/molecules/SchedulingCalendar'
 import Hours from 'src/components/molecules/SchedulingHours'
 import Confirm from 'src/components/atomic/btn-confirm'
@@ -11,10 +9,10 @@ import Confirm from 'src/components/atomic/btn-confirm'
 const Attendance = () => {
   const history = useHistory()
   const handleOptions = () => {
-    history.push( 'options' )
+    history.push('/tipos-agendamento')
   }
   const handleConfirm = () => {
-    history.push( 'formulario' )
+    history.push('formulario')
   }
 
   return (
@@ -42,7 +40,9 @@ const Attendance = () => {
         <Hours />
       </Horas>
 
-      <Confirm onClick={handleConfirm} />
+      <div style={{ width: '90%' }}>
+        <Confirm onClick={handleConfirm} />
+      </div>
     </Container>
   )
 }

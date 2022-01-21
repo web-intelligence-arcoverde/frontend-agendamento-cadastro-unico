@@ -11,7 +11,7 @@ import { useHistory } from 'react-router-dom'
 const Home = () => {
   const history = useHistory()
   const handleOptions = () => {
-    history.push('/scheuling-types')
+    history.push('/tipos-agendamento')
   }
   return (
     <Container>

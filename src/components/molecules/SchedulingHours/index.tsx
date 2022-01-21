@@ -18,13 +18,19 @@ const Hours = () => {
   return (
     <Container>
       {!visibleCard && (
-        <>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+          }}
+        >
           {apiHours.map(({ hours }) => (
             <CardHours type="submit" onClick={() => handleDate()}>
               <h2>{hours}</h2>
             </CardHours>
           ))}
-        </>
+        </div>
       )}
       {visibleCard && <CardComponent onClick={handleRefresh} title="12:00" />}
     </Container>

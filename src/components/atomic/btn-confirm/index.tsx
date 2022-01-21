@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container } from './styled'
 import Img from 'assets/icons/calendar.svg'
 

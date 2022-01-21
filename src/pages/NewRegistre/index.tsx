@@ -1,19 +1,14 @@
-import { ReactComponent as ArrowIcon } from 'assets/icons/arrow.svg'
-import ButtonBack from 'src/components/atomic/SpeedDialButton'
 import Card from 'src/components/atomic/CardButton'
 import PrefectureLogo from 'components/molecules/PrefectureLogo'
 
 import { Att, Head, Dates, Container, Horas } from './styled'
 import Calendar from 'src/components/molecules/SchedulingCalendar'
 import { useHistory } from 'react-router-dom'
-import Button from 'src/components/atomic/Button'
+import Button from '../../components/atomic/Button'
 
 const Registre = () => {
   const history = useHistory()
 
-  const handleOption = () => {
-    history.push('options')
-  }
   const handleForm = () => {
     history.push('formulario')
   }

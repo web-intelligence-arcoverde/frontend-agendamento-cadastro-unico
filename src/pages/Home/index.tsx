@@ -1,6 +1,6 @@
 import { Container, ContainerButton } from './style'
 
-import Button from 'src/components/atomic/Button'
+import Button from '../../components/atomic/Button'
 import { Title } from 'src/components/atomic/Typography'
 
 import Social from 'src/components/molecules/SocialAssistanceLogo'

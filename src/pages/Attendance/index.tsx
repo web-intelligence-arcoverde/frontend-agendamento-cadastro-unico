@@ -4,7 +4,7 @@ import { Att, Container, Dates, Head, Horas } from './styled'
 import { useHistory } from 'react-router-dom'
 import Calendar from 'src/components/molecules/SchedulingCalendar'
 import Hours from 'src/components/molecules/SchedulingHours'
-import Button from 'src/components/atomic/Button'
+import Button from '../../components/atomic/Button'
 
 const Attendance = () => {
   const history = useHistory()

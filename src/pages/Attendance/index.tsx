@@ -11,10 +11,10 @@ import Confirm from 'src/components/atomic/btn-confirm'
 const Attendance = () => {
   const history = useHistory()
   const handleOptions = () => {
-    history.push('options')
+    history.push( 'options' )
   }
   const handleConfirm = () => {
-    history.push('formulario')
+    history.push( 'formulario' )
   }
 
   return (
@@ -42,7 +42,6 @@ const Attendance = () => {
         <Hours />
       </Horas>
 
-      <ButtonBack onClick={handleOptions} Icon={ArrowIcon} />
       <Confirm onClick={handleConfirm} />
     </Container>
   )

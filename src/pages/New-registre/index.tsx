@@ -12,10 +12,10 @@ const Registre = () => {
   const history = useHistory()
 
   const handleOption = () => {
-    history.push('options')
+    history.push( 'options' )
   }
   const handleForm = () => {
-    history.push('formulario')
+    history.push( 'formulario' )
   }
   return (
     <Container>
@@ -39,7 +39,6 @@ const Registre = () => {
         <Card title="9:00 horas" />
       </Horas>
 
-      <ButtonBack onClick={handleOption} Icon={ArrowIcon} />
       <Confirm onClick={handleForm} />
     </Container>
   )

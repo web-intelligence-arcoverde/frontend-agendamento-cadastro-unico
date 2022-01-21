@@ -14,8 +14,8 @@ import { Header, Container } from './style'
 const Options = () => {
   const history = useHistory()
 
-  const goTo = (go): any => {
-    history.push(`/${go}`)
+  const goTo = ( go ): any => {
+    history.push( `/${go}` )
   }
   return (
     <Container>
@@ -26,11 +26,10 @@ const Options = () => {
         <TitleCard style={{ marginBottom: '10px' }}>
           Escolha o atendimento
         </TitleCard>
-        <Card onClick={() => goTo('options-atendimento')} title="Atendimento" />
+        <Card onClick={() => goTo( 'options-atendimento' )} title="Atendimento" />
       </div>
-      <Card onClick={() => goTo('novo-cadastro')} title="Cadastro Novo" />
+      <Card onClick={() => goTo( 'novo-cadastro' )} title="Cadastro Novo" />
 
-      <SpeedDialButton onClick={() => goTo('/')} Icon={ArrowIcon} />
 
       <Social />
     </Container>

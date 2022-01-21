@@ -6,10 +6,10 @@ import Form from 'src/pages/FormCadastro'
 import Attendance from 'src/pages/Attendance'
 import Registre from 'src/pages/New-registre'
 
-const GenericNotFound = lazy( () =>
-  import( 'src/pages/GenericNotFound/GenericNotFound' ).then( module => ( {
+const GenericNotFound = lazy(() =>
+  import('src/pages/GenericNotFound/GenericNotFound').then(module => ({
     default: module.GenericNotFound,
-  } ) ),
+  })),
 )
 
 export const Routes = () => {
@@ -18,7 +18,7 @@ export const Routes = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/scheuling-types" component={ScheulingTypes} />
-        <Route path="/optionsa-tendimento" component={Attendance} />
+        <Route path="/opcoes-atendimento" component={Attendance} />
         <Route path="/formulario" component={Form} />
         <Route path="/novo-cadastro" component={Registre} />
         <Route path="/404" component={GenericNotFound} />

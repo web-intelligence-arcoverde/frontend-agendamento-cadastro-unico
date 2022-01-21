@@ -6,16 +6,16 @@ import PrefectureLogo from 'components/molecules/PrefectureLogo'
 import { Att, Head, Dates, Container, Horas } from './styled'
 import Calendar from 'src/components/molecules/SchedulingCalendar'
 import { useHistory } from 'react-router-dom'
-import Confirm from 'src/components/atomic/btn-confirm'
+import Button from 'src/components/atomic/Button'
 
 const Registre = () => {
   const history = useHistory()
 
   const handleOption = () => {
-    history.push( 'options' )
+    history.push('options')
   }
   const handleForm = () => {
-    history.push( 'formulario' )
+    history.push('formulario')
   }
   return (
     <Container>
@@ -39,7 +39,7 @@ const Registre = () => {
         <Card title="9:00 horas" />
       </Horas>
 
-      <Confirm onClick={handleForm} />
+      <Button onClick={handleForm} label="confirmar" />
     </Container>
   )
 }

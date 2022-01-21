@@ -4,7 +4,7 @@ import { Att, Container, Dates, Head, Horas } from './styled'
 import { useHistory } from 'react-router-dom'
 import Calendar from 'src/components/molecules/SchedulingCalendar'
 import Hours from 'src/components/molecules/SchedulingHours'
-import Confirm from 'src/components/atomic/btn-confirm'
+import Button from 'src/components/atomic/Button'
 
 const Attendance = () => {
   const history = useHistory()
@@ -41,7 +41,7 @@ const Attendance = () => {
       </Horas>
 
       <div style={{ width: '90%' }}>
-        <Confirm onClick={handleConfirm} />
+        <Button onClick={handleConfirm} label="Confirmar" />
       </div>
     </Container>
   )

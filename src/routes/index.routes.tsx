@@ -4,7 +4,7 @@ import Home from 'src/pages/Home'
 import ScheulingTypes from 'src/pages/ScheulingTypes'
 import Form from 'src/pages/FormCadastro'
 import Attendance from 'src/pages/Attendance'
-import Registre from 'src/pages/New-registre'
+import Registre from 'src/pages/NewRegistre'
 
 const GenericNotFound = lazy(() =>
   import('src/pages/GenericNotFound/GenericNotFound').then(module => ({
